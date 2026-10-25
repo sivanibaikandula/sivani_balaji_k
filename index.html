@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sivani Balaji | Links</title>
+  <!-- Separate CSS file ni ikkada link chesamu -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--PROFILE DETAILS-->
+  <div class="card">
+    <div class="avatar-container">
+      <img src="avatar.png.jpeg" alt="Sivani Balaji" class="profile-pic">
+    </div>
+
+    <!--INTRODUCTION OF PAGE-->
+    <div class="greeting">Hello Cuties ✨</div>
+    <div class="intro">Hii .. This is <span class="name">Sivani Balaji</span> 🌸</div>
+    <p class="role-title">👩‍💻 Software Developer | Tech Enthusiast</p>
+    <!--MUSIC-->
+    <div class="music-pill">
+  <span class="music-icon">🎧</span>
+  <span class="music-title">Good beats make hard code easy ✨🎶</span>
+  <span class="music-bars">
+    <span></span><span></span><span></span><span></span>
+  </span>
+</div>
+    <!-- Tech Skills -->
+    <p class="section-title">My Tech Stack & Skills</p>
+    <div class="skills">
+  <div class="chip" onclick="openPopup('Python', 'Python is a high-level, general-purpose programming language designed by Guido van Rossum and first released in 1991')">Python</div>
+  <div class="chip" onclick="openPopup('Java', 'Java is a high-level, object-oriented, memory-safe programming language that operates on the core philosophy of Write Once, Run Anywhere (WORA)')">Java</div>
+  <div class="chip" onclick="openPopup('SQL', ' SQL (Structured Query Language) is the global standard programming language used to manage, query, and manipulate data within Relational Database Management Systems (RDBMS)')">SQL</div>
+  <div class="chip" onclick="openPopup('HTML', ' HTML (HyperText Markup Language) is the standard markup language used to create and structure pages on the World Wide Web')">HTML</div>
+  <div class="chip" onclick="openPopup('CSS', ' Cascading Style Sheets (CSS) is a cornerstone stylesheet language used to format, style, and design the layout of web pages')">CSS</div>
+</div>
+<!--Social links-->
+<div class="social-links">
+      <a href="https://instagram.com/sivani_balaji_k" target="_blank" rel="noopener noreferrer" class="social-btn" title="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e1306c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+        </svg>
+        <span class="insta-text">Let's Connect</span>
+      </a>
+    </div>
+  </div>
+<!--Modal Popup-->
+<div id="modalBackdrop" class="modal-backdrop hidden" onclick="closePopup()">
+  <div class="modal-card" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closePopup()">✖️</button>
+    <h3 id="popupTitle">Skill Name</h3>
+    <p id="popupDesc">Skill details go here...</p>
+  </div>
+</div>
+
+<script>
+  function openPopup(title, desc) {
+    document.getElementById('popupTitle').innerText = title;
+    document.getElementById('popupDesc').innerText = desc;
+    document.getElementById('modalBackdrop').classList.remove('hidden');
+  }
+
+  function closePopup() {
+    document.getElementById('modalBackdrop').classList.add('hidden');
+  }
+</script>
+    </div>
+</body>
+</html>
